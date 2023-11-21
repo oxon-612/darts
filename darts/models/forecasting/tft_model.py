@@ -248,6 +248,8 @@ class _TFTModule(PLMixedCovariatesModule):
             output_size=self.hidden_size,
             dropout=self.dropout,
             layer_norm=self.layer_norm,
+            bidirectional = 'True',
+
         )
 
         # for post lstm static enrichment
@@ -257,6 +259,7 @@ class _TFTModule(PLMixedCovariatesModule):
             output_size=self.hidden_size,
             dropout=self.dropout,
             layer_norm=self.layer_norm,
+            bidirectional = 'True',
         )
 
         # lstm encoder (history) and decoder (future) for local processing
